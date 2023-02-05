@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1026.0" style="-fx-background-color: rgb(244,231,211);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ServerGUIController">
+   <children>
+      <Label alignment="CENTER" layoutX="2.0" prefHeight="116.0" prefWidth="1026.0" style="-fx-background-color: #1f4e5f;" text="Server control" textFill="#f2e6d3">
+         <font>
+            <Font name="Guttman Drogolin Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <effect>
+            <InnerShadow choke="0.25" color="#f5e7d3" radius="9.26" width="18.04" />
+         </effect>
+      </Label>
+      <ImageView fitHeight="123.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LogoNew.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="connectBtn" layoutX="406.0" layoutY="244.0" mnemonicParsing="false" onAction="#connect" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" style="-fx-background-color: rgb(82,157,90);" text="Connect" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="disconnectBtn" layoutX="533.0" layoutY="244.0" mnemonicParsing="false" onAction="#disconnect" style="-fx-background-color: rgb(241,110,81);" text="Disconnect" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="345.0" layoutY="202.0" text="Port :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <TextField fx:id="portTextField" layoutX="402.0" layoutY="201.0" prefHeight="31.0" prefWidth="232.0" />
+      <Label layoutX="333.0" layoutY="159.0" text="Connection Status :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="connectionStatusLabel" layoutX="522.0" layoutY="160.0" text="disconnected">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Circle fx:id="connectionCircle" fill="RED" layoutX="653.0" layoutY="174.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <TableView fx:id="connectedClientsTable" layoutX="647.0" layoutY="333.0" prefHeight="391.0" prefWidth="361.0" style="-fx-border-color: rgb(40,40,40); -fx-border-width: 3;">
+        <columns>
+          <TableColumn fx:id="ipAddressColumn" prefWidth="122.0" text="IP Address" />
+          <TableColumn fx:id="nameColumn" minWidth="0.0" prefWidth="120.0" text="Name" />
+            <TableColumn fx:id="roleColumn" prefWidth="129.0" text="Role" />
+        </columns>
+      </TableView>
+      <Label layoutX="647.0" layoutY="309.0" text="Connected Clients :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="780.0" layoutY="723.0" text="Connected Clients ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="Console" layoutX="23.0" layoutY="333.0" prefHeight="391.0" prefWidth="585.0" style="-fx-control-inner-background: rgb(47,47,47); -fx-background-color: rgb(235,235,235); -fx-border-color: rgb(40,40,40); -fx-border-width: 3;">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font></TextArea>
+      <Label layoutX="23.0" layoutY="309.0" text="Console :">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Text fx:id="numOfConnections" layoutX="608.0" layoutY="744.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="158.00000941753387">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="16.0" layoutY="130.0" text="mysql password" />
+      <TextField fx:id="mysqlPassword" layoutX="116.0" layoutY="126.0" text="omri12345" />
+   </children>
+</AnchorPane>

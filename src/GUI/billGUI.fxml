@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="493.0" style="-fx-background-color: rgb(255,255,255);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.billController">
+   <children>
+      <Label alignment="CENTER" layoutY="10.0" prefHeight="35.0" prefWidth="493.0" text="Bill">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="290.0" layoutY="45.0" prefHeight="21.0" prefWidth="54.0" text="Date : ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="234.0" layoutX="259.0" layoutY="78.0" startX="-259.0" strokeWidth="4.0" />
+      <Label alignment="CENTER" layoutX="161.0" layoutY="115.0" prefHeight="30.0" prefWidth="94.0" text="Order id : ">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="DateLabel" layoutX="344.0" layoutY="45.0" prefHeight="21.0" prefWidth="150.0" text="Label" />
+      <Label fx:id="ordererIdLabel" layoutX="255.0" layoutY="115.0" prefHeight="30.0" prefWidth="236.0" text="Label">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="orderSummaryLabel" alignment="TOP_CENTER" layoutX="1.0" layoutY="147.0" prefWidth="493.0" text="price before discount is :  432423">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

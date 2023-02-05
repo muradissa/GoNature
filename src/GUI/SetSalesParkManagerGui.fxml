@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="620.0" maxWidth="910.0" minHeight="620.0" minWidth="910.0" prefHeight="620.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SetNewSaleGuiC">
+   <children>
+      <Button fx:id="SendBtn" layoutX="360.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#SendSaleRequest" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: rgb(244,231,211);" text="Send Sale Request">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#3784bc" />
+         </effect>
+      </Button>
+      <Label fx:id="message" alignment="CENTER" layoutX="-2.0" layoutY="438.0" prefHeight="31.0" prefWidth="910.0" text="Label" textAlignment="CENTER" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="303.0" layoutY="161.0" prefHeight="32.0" prefWidth="108.0" text="Start Date :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="305.0" layoutY="202.0" prefHeight="32.0" prefWidth="90.0" text="End Date :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="305.0" layoutY="250.0" prefHeight="32.0" prefWidth="119.0" text="Sale Percent :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="308.0" layoutY="294.0" prefHeight="32.0" prefWidth="108.0" text="Sale Name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="StartDate" layoutX="440.0" layoutY="164.0" prefHeight="25.0" prefWidth="149.0" />
+      <DatePicker fx:id="EndDate" layoutX="439.0" layoutY="205.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="SalePrecent" layoutX="440.0" layoutY="253.0" />
+      <TextField fx:id="SaleName" layoutX="440.0" layoutY="298.0" />
+   </children>
+</AnchorPane>

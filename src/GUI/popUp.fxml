@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#anchorPaneDragged" onMousePressed="#anchorPanePressed" prefHeight="315.0" prefWidth="511.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: rgb(255,255,255);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.popUpCC">
+   <children>
+      <Label fx:id="colorLabel2" prefHeight="201.0" prefWidth="511.0" style="-fx-background-color: rgb(58,186,111); -fx-border-radius: 30; -fx-background-radius: 30;" />
+      <Label fx:id="colorLabel" layoutY="117.0" prefHeight="84.0" prefWidth="511.0" style="-fx-background-color: rgb(58,186,111);" />
+      <Label fx:id="mainMessage" alignment="CENTER" layoutY="101.0" prefHeight="32.0" prefWidth="511.0" text="Main Message" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="secondaryMessage" alignment="CENTER" layoutX="-1.0" layoutY="143.0" prefHeight="30.0" prefWidth="511.0" text="Secondary Message" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="Button" layoutX="203.0" layoutY="239.0" mnemonicParsing="false" onAction="#exit" prefHeight="39.0" prefWidth="105.0" style="-fx-background-radius: 40; -fx-background-color: rgb(58,186,111);" text="Button" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <ImageView fx:id="image" fitHeight="60.0" fitWidth="69.0" layoutX="219.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/success.png" />
+         </image></ImageView>
+      <ImageView fx:id="image1" fitHeight="60.0" fitWidth="69.0" layoutX="219.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/failure.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

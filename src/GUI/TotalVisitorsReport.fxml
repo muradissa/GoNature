@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="879.0" prefWidth="1222.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TotalVisitorReportC">
+   <children>
+      <Label layoutX="229.0" layoutY="232.0" text="Total visitors Report">
+         <font>
+            <Font name="Georgia Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Month" layoutX="399.0" layoutY="270.0" text="5/2021">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="221.0" layoutY="270.0" text="For the month ended ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="715.0" layoutY="111.0" prefHeight="311.0" prefWidth="218.0" text="Planned Traveler &#10;&#10;Planned Subscriber&#10; &#10;Planned Guide &#10;&#10;Unplanned Traveler&#10; &#10;Unplanned Subscriber &#10;&#10;Unplanned Guide ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="715.0" layoutY="81.0" text="Visitor Type">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="992.0" layoutY="78.0" text="number">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="planedVisitorN" alignment="CENTER" contentDisplay="CENTER" layoutX="1021.0" layoutY="122.0" text="8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="PlannedSubscriberN" alignment="CENTER" contentDisplay="CENTER" layoutX="1021.0" layoutY="179.0" text="8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="PlannedGuideN" alignment="CENTER" contentDisplay="CENTER" layoutX="1021.0" layoutY="232.0" text="8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="UnPlannedTravelerN" alignment="CENTER" contentDisplay="CENTER" layoutX="1021.0" layoutY="284.0" text="8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="UnPlannedSubscriberN" alignment="CENTER" contentDisplay="CENTER" layoutX="1021.0" layoutY="339.0" text="8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="UnPlannedGuideN" alignment="CENTER" layoutX="1021.0" layoutY="388.0" text="8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="758.0" layoutY="440.0" text="Total">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="TotalNumber" layoutX="1021.0" layoutY="437.0" text="4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="179.0" text="GoNature - Tel Aviv Park">
+         <font>
+            <Font name="Georgia Pro" size="36.0" />
+         </font>
+      </Label>
+      <Line endX="253.0" layoutX="908.0" layoutY="108.0" startX="-262.0" />
+      <ImageView fitHeight="113.0" fitWidth="136.0" layoutX="271.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lgoggui.png" />
+         </image>
+      </ImageView>
+      <Line endX="253.0" layoutX="908.0" layoutY="422.0" startX="-262.0" />
+      <Line endX="253.0" layoutX="908.0" layoutY="78.0" startX="-262.0" />
+      <Label layoutX="779.0" layoutY="42.0" text="Total visitors In Month">
+         <font>
+            <Font name="Georgia Italic" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="11.0" layoutY="469.0" prefHeight="403.0" prefWidth="1196.0" style="-fx-background-color: #dac392;">
+         <children>
+            <BarChart fx:id="barChart" layoutX="18.0" layoutY="8.0" prefHeight="394.0" prefWidth="1169.0" title="Total Visitors By Day Of Week">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

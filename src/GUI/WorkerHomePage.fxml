@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.WorkerHomePageCC"> 
+   <children>
+      <VBox prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: rgb(244,231,211);">
+         <children>
+            <ImageView fitHeight="123.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LogoNew.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="42.0" />
+               </VBox.margin>
+            </ImageView>
+            <Pane prefHeight="137.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="HomePageBtn" fitHeight="116.0" fitWidth="116.0" layoutX="42.0" onMouseClicked="#goToHomePage" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/8aff3574eabda894d8f7484bf8e81a6e-home-blue-house-icon-by-vexels.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="TOP_CENTER" layoutY="116.0" prefHeight="20.0" prefWidth="200.0" text="Home Page" textFill="#2d4e5f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="125.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="NewOrderButton" fitHeight="116.0" fitWidth="109.0" layoutX="46.0" onMouseClicked="#goToUnplannedOrderPage" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-create-order-96.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="TOP_CENTER" layoutX="-4.0" layoutY="100.0" prefHeight="20.0" prefWidth="200.0" text="New Order" textFill="#294e5f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Label fx:id="PageTitleLabel" layoutX="200.0" prefHeight="100.0" prefWidth="910.0" style="-fx-background-color: #1f4e5f;" text="Home Page" textFill="#f2e6d3">
+         <font>
+            <Font name="Guttman Drogolin Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <effect>
+            <InnerShadow choke="0.25" color="#f5e7d3" radius="9.26" width="18.04" />
+         </effect>
+      </Label>
+      <Label fx:id="GreetingLabel" alignment="TOP_RIGHT" layoutX="827.0" layoutY="23.0" prefHeight="27.0" prefWidth="280.0" text="Hello,Name(Role)" textFill="#f4e7d3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="LogOutBtn" layoutX="960.0" layoutY="59.0" mnemonicParsing="false" onAction="#LogOut" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: rgb(245,231,211);" text="Logout">
+         <effect>
+            <InnerShadow choke="0.2" height="0.0" radius="2.0" width="10.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="innerPane" layoutX="200.0" layoutY="100.0" prefHeight="620.0" prefWidth="910.0" />
+   </children>
+</AnchorPane>

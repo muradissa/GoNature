@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnPane" prefHeight="539.0" prefWidth="1028.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.IdentificationGUICC">
+   <children>
+      <AnchorPane layoutX="600.0" layoutY="57.0" prefHeight="429.0" prefWidth="392.0" style="-fx-background-color: #1f4e5f;">
+         <children>
+            <Button fx:id="id_btn" layoutX="87.0" layoutY="92.0" mnemonicParsing="false" onAction="#idBtnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: rgb(0,255,0);" text="id" />
+            <Button fx:id="subscription_btn" layoutX="185.0" layoutY="92.0" mnemonicParsing="false" onAction="#subscriptionBtnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #dadada;" text="Subscription" />
+            <Button fx:id="identify_btn" layoutX="80.0" layoutY="274.0" mnemonicParsing="false" onAction="#identificationBtnAction" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" prefHeight="27.0" prefWidth="236.0" style="-fx-background-color: rgb(244,231,211); -fx-background-radius: 35;" text="identify" textFill="#1f4e5f" />
+            <Label fx:id="id_sub_label" alignment="CENTER_RIGHT" layoutX="1.0" layoutY="185.0" prefHeight="21.0" prefWidth="100.0" text="id :" textFill="#f4e7d3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id_sub_text" alignment="CENTER" layoutX="114.0" layoutY="180.0" onKeyPressed="#EnterPressed" prefHeight="31.0" prefWidth="186.0" promptText="Enter Your Id Number">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="star_1_label" layoutX="315.0" layoutY="177.0" text="*" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="48.0" prefHeight="21.0" prefWidth="392.0" text="Identification" textFill="#f4e7d3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="error_label" alignment="CENTER" layoutY="234.0" prefHeight="21.0" prefWidth="392.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="572.0" fitWidth="545.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lgoggui.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="5.0" layoutY="57.0" prefHeight="40.0" prefWidth="538.0" text="Welcome Travelers!" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="backButton" fitHeight="53.0" fitWidth="60.0" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMousePressed="#backClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/26-512.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

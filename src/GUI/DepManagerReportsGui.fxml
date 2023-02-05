@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="620.0" maxWidth="910.0" minHeight="620.0" minWidth="910.0" prefHeight="620.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DepManagerReportsGUICC">
+   <children>
+      <HBox layoutX="320.0" layoutY="189.0" prefHeight="78.0" prefWidth="332.0">
+         <children>
+            <VBox prefHeight="78.0" prefWidth="146.0">
+               <children>
+                  <Label text="Report Type :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Report Month :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="78.0" prefWidth="211.0">
+               <children>
+                  <ComboBox fx:id="ReportTypeCombo" prefHeight="25.0" prefWidth="175.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <DatePicker fx:id="ReportDatePicker">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </DatePicker>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="CreateReportBtn" layoutX="378.0" layoutY="291.0" mnemonicParsing="false" onAction="#CreateReportBtnClicked" prefHeight="39.0" prefWidth="155.0" style="-fx-background-color: rgb(244,231,211);" text="Create Report">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0e4d4b" />
+         </effect>
+      </Button>
+      <ComboBox fx:id="ParkComboBox" layoutX="455.0" layoutY="163.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="320.0" layoutY="162.0" text="Select Park : ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="message" layoutX="361.0" layoutY="351.0" text="Please Fill in All Fields" textFill="RED" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

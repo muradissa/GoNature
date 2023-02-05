@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.choosingAnotherOrderTimeCC">
+   <children>
+      <TableView fx:id="choosingAnotherDATETIME_TableView" layoutX="108.0" layoutY="177.0" onMouseClicked="#choosingRableViewDateandTime" prefHeight="200.0" prefWidth="236.0">
+         <columns>
+            <TableColumn fx:id="choosingAnotherDATET_TableView" prefWidth="123.0" text="Date" />
+            <TableColumn fx:id="choosingAnotherTIME_TableView" prefWidth="111.0" text="Time" />
+         </columns>
+      </TableView>
+      <Label layoutX="122.0" layoutY="120.0" text="pick yourself another date:">
+         <font>
+            <Font name="Georgia Pro Cond Semibold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="choosingAnotherOrder_Btn" layoutX="178.0" layoutY="396.0" mnemonicParsing="false" onAction="#actionchoosingAnotherOrder" prefHeight="39.0" prefWidth="97.0" style="-fx-background-color: #f4e7d3; -fx-background-radius: 30;" text="Order">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Line endX="16.0" endY="-103.0" layoutX="449.0" layoutY="169.0" startX="16.0" startY="375.0" />
+      <Label layoutX="557.0" layoutY="396.0" text="𝓭𝓸𝓷`𝓽 𝓶𝓲𝓼𝓼 &#10;𝓽𝓱𝓮 𝓸𝓹𝓹𝓮𝓻𝓽𝓾𝓷𝓲𝓽𝔂 &#10;𝓽𝓸 𝓿𝓲𝓼𝓲𝓽 𝓾𝓼!" textAlignment="CENTER">
+         <font>
+            <Font name="Sitka Small Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="210.0" fitWidth="334.0" layoutX="557.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/natural-park.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

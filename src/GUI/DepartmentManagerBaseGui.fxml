@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DepManagerBaseGUIController">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: rgb(244,231,211);">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LogoNew.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="42.0" />
+               </VBox.margin>
+            </ImageView>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="HomePageImage" fitHeight="100.0" fitWidth="100.0" layoutX="50.0" onMouseClicked="#HomePageClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/8aff3574eabda894d8f7484bf8e81a6e-home-blue-house-icon-by-vexels.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="TOP_CENTER" layoutY="90.0" prefHeight="20.0" prefWidth="200.0" text="Home Page" textFill="#2d4e5f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="ReportsImage" fitHeight="100.0" fitWidth="120.0" layoutX="50.0" onMouseClicked="#ReportsClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/call-report-icon-3.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="TOP_CENTER" layoutY="96.0" prefHeight="20.0" prefWidth="200.0" text="Reports" textFill="#2d4e5f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutY="96.0" prefHeight="20.0" prefWidth="200.0" text="Parameters Change Requests" textFill="#2d4e5f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ParametersImage" fitHeight="100.0" fitWidth="100.0" layoutX="50.0" onMouseClicked="#ParametersClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/change_parameters.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutY="96.0" prefHeight="20.0" prefWidth="200.0" text="Sales Requests" textFill="#2d4e5f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="SalesImage" fitHeight="100.0" fitWidth="100.0" layoutX="50.0" onMouseClicked="#SalesClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/48-512.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="VacancyImage" fitHeight="100.0" fitWidth="100.0" layoutX="50.0" onMouseClicked="#VacancyClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/vacancy.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="TOP_CENTER" layoutY="90.0" prefHeight="20.0" prefWidth="200.0" text="Check Park Vacancy" textFill="#2d4e5f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Label fx:id="MainLabel" layoutX="200.0" prefHeight="100.0" prefWidth="910.0" style="-fx-background-color: #1f4e5f;" text="Home Page For Dep Manager" textFill="#f2e6d3">
+         <font>
+            <Font name="Guttman Drogolin Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <effect>
+            <InnerShadow choke="0.25" color="#f5e7d3" radius="9.26" width="18.04" />
+         </effect>
+      </Label>
+      <Label fx:id="RoleLabel" alignment="TOP_RIGHT" layoutX="742.0" layoutY="32.0" prefHeight="27.0" prefWidth="354.0" text="Hello,Name(Role)" textFill="#f4e7d3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="LogoutBtn" layoutX="960.0" layoutY="59.0" mnemonicParsing="false" onAction="#LogOutClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: rgb(245,231,211);" text="Logout">
+         <effect>
+            <InnerShadow choke="0.2" height="0.0" radius="2.0" width="10.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="AnPane" layoutX="200.0" layoutY="100.0" prefHeight="620.0" prefWidth="910.0" />
+   </children>
+</AnchorPane>

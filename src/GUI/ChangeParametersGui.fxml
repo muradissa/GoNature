@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="620.0" maxWidth="910.0" minHeight="620.0" minWidth="910.0" prefHeight="620.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ChangeParkParametersGuiC">
+   <children>
+      <Button fx:id="ChangeStayTimeBtn" layoutX="744.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#ChangeStayTimeParameter" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: rgb(244,231,211);" text="request change">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#195772" />
+         </effect>
+      </Button>
+      <Button fx:id="ChangeMaxNumVisitorBtn" layoutX="744.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#ChangeNumberOfVisitortParameter" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: rgb(244,231,211);" text="request change">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#195772" />
+         </effect>
+      </Button>
+      <Button fx:id="ChangeNumUnplannedVBtn" layoutX="744.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#ChangeMaxNumOfUnplannedV" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: rgb(244,231,211);" text="request change">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#195772" />
+         </effect>
+      </Button>
+      <HBox layoutX="126.0" layoutY="215.0" prefHeight="120.0" prefWidth="592.0">
+         <children>
+            <VBox prefHeight="120.0" prefWidth="342.0">
+               <children>
+                  <Label maxHeight="44.0" minHeight="25.0" minWidth="150.0" prefHeight="44.0" prefWidth="209.0" text="Stay Time inside the park :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label maxHeight="42.0" minHeight="25.0" minWidth="150.0" prefHeight="42.0" prefWidth="202.0" text="Max Number of Visitors :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label maxHeight="43.0" minHeight="25.0" minWidth="150.0" prefHeight="43.0" prefWidth="309.0" text="Max Number of Unplanned Visitors :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="120.0" prefWidth="189.0">
+               <children>
+                  <TextField fx:id="StayTimeOldValue">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="MaxNumberVisitorsOldV">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="MaxNumUnplannedOldV" prefHeight="20.0" prefWidth="140.0">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="120.0" prefWidth="187.0">
+               <children>
+                  <TextField fx:id="StayTimeNewValue" promptText="HH:mm">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="MaxNumOfVisitorNewV" layoutX="10.0" layoutY="10.0">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="MaxNumUnplannedNewV" layoutX="10.0" layoutY="10.0">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="448.0" layoutY="180.0" prefHeight="27.0" prefWidth="82.0" text="old value">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="609.0" layoutY="180.0" text="new value">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="message" alignment="CENTER" layoutX="-1.0" layoutY="441.0" prefHeight="27.0" prefWidth="910.0" text="message" textAlignment="CENTER" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

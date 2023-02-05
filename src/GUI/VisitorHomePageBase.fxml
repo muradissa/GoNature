@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.VisitorHomePageCC">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: rgb(244,231,211);">
+         <children>
+            <ImageView fitHeight="123.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LogoNew.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="42.0" />
+               </VBox.margin>
+            </ImageView>
+            <Pane prefHeight="135.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="ICON1" fitHeight="116.0" fitWidth="124.0" layoutX="42.0" onMouseClicked="#openVisitorHomePage" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/homePageIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutY="111.0" prefHeight="20.0" prefWidth="200.0" text="Home page" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="131.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="ICON4" fitHeight="116.0" fitWidth="116.0" layoutX="42.0" onMouseClicked="#eventOrerIcon" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/purchase-order.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="-10.0" layoutY="106.0" prefHeight="20.0" prefWidth="220.0" text="Order" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Label fx:id="title_homepage_label" layoutX="200.0" prefHeight="100.0" prefWidth="910.0" style="-fx-background-color: #1f4e5f;" text="Home Page" textFill="#f2e6d3">
+         <font>
+            <Font name="Guttman Drogolin Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <effect>
+            <InnerShadow choke="0.25" color="#f5e7d3" radius="9.26" width="18.04" />
+         </effect>
+      </Label>
+      <Label fx:id="hello_label" alignment="TOP_RIGHT" layoutX="803.0" layoutY="23.0" prefHeight="27.0" prefWidth="300.0" text="Hello,Name(Role)" textFill="#f4e7d3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="logout_btn" layoutX="960.0" layoutY="59.0" mnemonicParsing="false" onAction="#logoutBtn" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: rgb(245,231,211);" text="Logout">
+         <effect>
+            <InnerShadow choke="0.2" height="0.0" radius="2.0" width="10.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="anPane" layoutX="200.0" layoutY="100.0" prefHeight="620.0" prefWidth="910.0">
+         <children>
+            <AnchorPane fx:id="WelcomTo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="910.0">
+               <children>
+                  <Label layoutX="91.0" layoutY="104.0" prefHeight="147.0" prefWidth="261.0" style="-fx-background-color: #e7e7e7; -fx-background-radius: 30;" text="&#10;&#10;&#10;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="330.0" layoutY="40.0" text="Welcome to GoNature">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="117.0" layoutY="109.0" text="profile">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="142.0" layoutY="145.0" text="ID:">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="142.0" layoutY="178.0" text="Full name:">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="140.0" layoutY="207.0" text="Email:">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="visitor_table_view" layoutX="91.0" layoutY="320.0" prefHeight="200.0" prefWidth="748.0">
+                     <columns>
+                        <TableColumn fx:id="parkname_tableColumn" prefWidth="120.0" text="Park name" />
+                        <TableColumn fx:id="dateOrder_tableColumn" minWidth="5.0" prefWidth="101.0" text="Date" />
+                        <TableColumn fx:id="time_tableColumn" minWidth="5.0" prefWidth="111.0" text="Time" />
+                        <TableColumn fx:id="numOfVisitors_tableColumn" minWidth="5.0" prefWidth="144.0" text="# of visitors" />
+                        <TableColumn fx:id="priceOrder_tableColumn" minWidth="5.0" prefWidth="132.0" text="Price" />
+                        <TableColumn fx:id="statusOrder_tableColumn" minWidth="5.0" prefWidth="138.0" text="Status" />
+                     </columns>
+                  </TableView>
+                  <HBox layoutX="465.0" layoutY="99.0" prefHeight="145.0" prefWidth="365.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="145.0" prefWidth="151.0" style="-fx-background-color: #c2b955;" text="You Have &#10;0&#10;Orders" textAlignment="CENTER">
+                           <effect>
+                              <DropShadow height="50.0" radius="24.5" width="50.0" />
+                           </effect>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="151.0" prefWidth="155.0" style="-fx-background-color: #55c291;" text="You have &#10;0 mins&#10;to confirm the order" textAlignment="CENTER">
+                           <effect>
+                              <DropShadow height="50.0" radius="24.5" width="50.0" />
+                           </effect>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="475.0" layoutY="109.0" prefHeight="145.0" prefWidth="365.0">
+                     <children>
+                        <Label fx:id="yellow_box_label" alignment="CENTER" prefHeight="145.0" prefWidth="151.0" style="-fx-background-color: #c2b955;" text="You Have &#10;0&#10;Orders" textAlignment="CENTER">
+                           <effect>
+                              <DropShadow height="50.0" radius="24.5" width="50.0" />
+                           </effect>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="green_box_label" alignment="CENTER" prefHeight="151.0" prefWidth="155.0" style="-fx-background-color: #55c291;" text="You have &#10;0 mins&#10;to confirm the order" textAlignment="CENTER">
+                           <effect>
+                              <DropShadow height="50.0" radius="24.5" width="50.0" />
+                           </effect>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button fx:id="profile_confirm_btn" layoutX="350.0" layoutY="560.0" mnemonicParsing="false" onAction="#actionConfirmBtn" style="-fx-background-color: #f2e6d3; -fx-background-radius: 30;" text="confirm">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#15ff00" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="profile_cancel_btn" layoutX="510.0" layoutY="560.0" mnemonicParsing="false" onAction="#actionCancelBtn" style="-fx-background-color: #f2e6d3; -fx-background-radius: 30;" text="cancel">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="RED" />
+                     </effect>
+                  </Button>
+                  <Label fx:id="label_for_tableview" layoutX="95.0" layoutY="280.0" prefHeight="25.0" prefWidth="300.0" text="Your upcomming orders:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="profile_id_label" layoutX="177.0" layoutY="145.0" prefHeight="20.0" prefWidth="164.0" />
+                  <Label fx:id="profile_fullname_label" layoutX="215.0" layoutY="178.0" prefHeight="20.0" prefWidth="134.0" />
+                  <Label fx:id="profile_email_label" layoutX="185.0" layoutY="207.0" prefHeight="20.0" prefWidth="164.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

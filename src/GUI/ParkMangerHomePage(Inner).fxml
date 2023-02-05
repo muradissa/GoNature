@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="620.0" maxWidth="910.0" minHeight="620.0" minWidth="910.0" prefHeight="620.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ParkMangerHomeGuiC">
+   <children>
+      <Label fx:id="WelcomeLabel" layoutX="14.0" layoutY="14.0" prefHeight="67.0" prefWidth="882.0" text="Welcome , Ayman">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="89.0" layoutY="116.0" prefHeight="145.0" prefWidth="710.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="149.0" prefWidth="155.0" style="-fx-background-color: #c2555e;" text="You Have&#10;2&#10;Sale requests in treatment&#10;" textAlignment="CENTER" wrapText="true">
+               <effect>
+                  <DropShadow height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="151.0" prefWidth="155.0" style="-fx-background-color: #55c291;" text="You Have Sent&#10;4&#10;Sale requests" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="156.0" prefWidth="155.0" style="-fx-background-color: #c2b955;" text="You Have&#10;3&#10;Parameter change&#10;requests in treatment" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="147.0" prefWidth="155.0" style="-fx-background-color: #55aac2;" text="You Have Sent&#10;4&#10;Parameter change&#10;requests" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Line endX="817.5" layoutX="93.0" layoutY="320.0" startX="-100.0" />
+      <Label alignment="CENTER" layoutY="300.0" prefHeight="17.0" prefWidth="910.0" style="-fx-background-color: rgb(244,231,211);" text="Your recent requests">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <HBox layoutX="100.0" layoutY="128.0" prefHeight="145.0" prefWidth="710.0">
+         <children>
+            <Label fx:id="SalesInTreatmentCard" alignment="CENTER" prefHeight="149.0" prefWidth="155.0" style="-fx-background-color: #c2555e;" text="You Have&#10;0&#10;Sale requests in treatment&#10;" textAlignment="CENTER" wrapText="true">
+               <effect>
+                  <DropShadow height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="AllSalesCard" alignment="CENTER" prefHeight="151.0" prefWidth="155.0" style="-fx-background-color: #55c291;" text="You Have Sent&#10;0&#10;Sale requests" textAlignment="CENTER">
+               <effect>
+                  <DropShadow height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="ParameterInTreatment" alignment="CENTER" prefHeight="156.0" prefWidth="155.0" style="-fx-background-color: #c2b955;" text="You Have&#10;0&#10;Parameter change&#10;requests in treatment" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="AllParametersRequest" alignment="CENTER" prefHeight="147.0" prefWidth="155.0" style="-fx-background-color: #55aac2;" text="You Have Sent&#10;0&#10;Parameter change&#10;requests" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow height="50.0" radius="24.5" width="50.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="AllRequestTable" layoutX="129.0" layoutY="341.0" prefHeight="265.0" prefWidth="646.0">
+        <columns>
+          <TableColumn fx:id="RequestNumber" maxWidth="150.0" minWidth="38.0" prefWidth="38.0" text="#" />
+          <TableColumn fx:id="status" maxWidth="266.0" minWidth="150.0" prefWidth="188.0" text="Status" />
+            <TableColumn fx:id="requestType" maxWidth="269.0" minWidth="150.0" prefWidth="239.0" text="Request Type" />
+            <TableColumn fx:id="IssueDate" maxWidth="222.0" minWidth="140.0" prefWidth="180.0" text="Issue Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
